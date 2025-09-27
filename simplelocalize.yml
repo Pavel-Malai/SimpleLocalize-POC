@@ -20,6 +20,7 @@ upload:
       options:
         - REPLACE_TRANSLATION_IF_FOUND
         - TRIM_LEADING_AND_TRAILING_WHITESPACES
+        - UPDATE_ORDER
 
 # Download all translated files from SimpleLocalize
 download:

@@ -1,7 +1,7 @@
 {
   "common": {
     "greetings": {
-      "hello": "Hello, {{title}} 1 ",
+      "hello": "Hello, {{title}}",
       "welcome-message": "Welcome to our multilingual application!"
     },
     "navigation": {
