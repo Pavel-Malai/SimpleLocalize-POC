@@ -36,5 +36,13 @@ jobs:
           cli-version: ${{ env.CLI_VERSION }}
           args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER'
 
+      - name: Auto-translate missing translations
+        uses: simplelocalize/github-action-cli@v4
+        with:
+          api-key: ${{ env.SIMPLELOCALIZE_API_KEY }}
+          command: 'auto-translate'
+          cli-version: ${{ env.CLI_VERSION }}
+          args: '--languageKeys de-de,es-es,fr-fr'
+
       - name: Display upload summary
-        run: echo "✅ Translation files have been successfully uploaded to SimpleLocalize"
+        run: echo "✅ Translation files have been successfully uploaded to SimpleLocalize and auto-translated"

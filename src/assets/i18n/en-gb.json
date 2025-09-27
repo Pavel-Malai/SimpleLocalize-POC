@@ -1,6 +1,6 @@
 {
   "common": {
-    "test1": "test 1",
+    "test1": "test 2",
     "greetings": {
       "hello": "Hello, {{title}} 2",
       "welcome-message": "Welcome to our multilingual application!"
