@@ -27,3 +27,6 @@ download:
   files:
     - path: "src/assets/i18n/{lang}.json"
       format: "single-language-json"
+      options:
+        - WRITE_NESTED
+ 
