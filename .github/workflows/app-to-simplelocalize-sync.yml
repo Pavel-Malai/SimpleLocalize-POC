@@ -1,0 +1,39 @@
+name: 'SimpleLocalize Translation Management'
+
+on:
+  push:
+    branches: [ master]
+  pull_request:
+    branches: [ master ]
+
+env:
+  CLI_VERSION: '2.10.0'
+  SIMPLELOCALIZE_API_KEY: '285066b7FeeAf4F5F4Fc307db3C3Ad22A62B18557dd706e1'
+
+jobs:
+  translation-management:
+    runs-on: ubuntu-latest
+    name: Preview and Upload Translations
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Preview translation upload
+        uses: simplelocalize/github-action-cli@v4
+        with:
+          api-key: ${{ env.SIMPLELOCALIZE_API_KEY }}
+          command: 'upload'
+          cli-version: ${{ env.CLI_VERSION }}
+          args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER --dryRun'
+
+      - name: Upload translation files
+        uses: simplelocalize/github-action-cli@v4
+        with:
+          api-key: ${{ env.SIMPLELOCALIZE_API_KEY }}
+          command: 'upload'
+          cli-version: ${{ env.CLI_VERSION }}
+          args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER'
+
+      - name: Display upload summary
+        run: echo "✅ Translation files have been successfully uploaded to SimpleLocalize"
