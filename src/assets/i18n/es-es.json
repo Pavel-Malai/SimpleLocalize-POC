@@ -1,5 +1,7 @@
 {
   "common": {
+    "test1": "prueba 2",
+    "test2": "prueba 2",
     "greetings": {
       "hello": "Hola, {{title}}",
       "welcome-message": "¡Bienvenido a nuestra aplicación multiidioma!"
