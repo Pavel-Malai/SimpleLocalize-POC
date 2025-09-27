@@ -20,9 +20,15 @@ upload:
       options:
         - REPLACE_TRANSLATION_IF_FOUND
         - TRIM_LEADING_AND_TRAILING_WHITESPACES
+        - UPDATE_ORDER
 
 # Download all translated files from SimpleLocalize
 download:
   files:
     - path: "src/assets/i18n/{lang}.json"
       format: "single-language-json"
+      options:
+        - WRITE_NESTED
+
+        
+ 
