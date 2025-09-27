@@ -1,4 +1,4 @@
-name: 'SimpleLocalize Download & Sync'
+name: 'Simplelocalize to App Sync'
 
 on:
   schedule:
