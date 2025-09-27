@@ -9,7 +9,8 @@ on:
 
 env:
   CLI_VERSION: '2.10.0'
-  SIMPLELOCALIZE_API_KEY: '285066b7FeeAf4F5F4Fc307db3C3Ad22A62B18557dd706e1'
+  SIMPLELOCALIZE_API_KEY_work: '285066b7FeeAf4F5F4Fc307db3C3Ad22A62B18557dd706e1'
+  SIMPLELOCALIZE_API_KEY_personal: 'Bb6bDec27ff5334F73E1b16854AF47F116F13211cf5D2309'
 
 jobs:
   translation-management:
@@ -23,7 +24,7 @@ jobs:
       - name: Preview translation upload
         uses: simplelocalize/github-action-cli@v4
         with:
-          api-key: ${{ env.SIMPLELOCALIZE_API_KEY }}
+          api-key: ${{ env.SIMPLELOCALIZE_API_KEY_personal }}
           command: 'upload'
           cli-version: ${{ env.CLI_VERSION }}
           args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER --dryRun'
@@ -31,7 +32,7 @@ jobs:
       - name: Upload translation files
         uses: simplelocalize/github-action-cli@v4
         with:
-          api-key: ${{ env.SIMPLELOCALIZE_API_KEY }}
+          api-key: ${{ env.SIMPLELOCALIZE_API_KEY_personal }}
           command: 'upload'
           cli-version: ${{ env.CLI_VERSION }}
           args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER'
@@ -39,7 +40,7 @@ jobs:
       - name: Auto-translate missing translations
         uses: simplelocalize/github-action-cli@v4
         with:
-          api-key: ${{ env.SIMPLELOCALIZE_API_KEY }}
+          api-key: ${{ env.SIMPLELOCALIZE_API_KEY_personal }}
           command: 'auto-translate'
           cli-version: ${{ env.CLI_VERSION }}
           args: '--languageKeys de-de,es-es,fr-fr'
