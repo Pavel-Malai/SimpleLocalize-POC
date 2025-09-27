@@ -1,0 +1,23 @@
+{
+  "common": {
+    "greetings": {
+      "hello": "Hallo, {{title}}",
+      "welcome-message": "Willkommen in unserer mehrsprachigen Anwendung!"
+    },
+    "navigation": {
+      "language-selector": "Sprache Auswählen"
+    }
+  },
+  "application": {
+    "status": {
+      "congratulations": "Herzlichen Glückwunsch! Ihre App läuft. 🎉"
+    },
+    "resources": {
+      "explore-docs": "Dokumentation Erkunden",
+      "learn-tutorials": "Mit Tutorials Lernen",
+      "cli-docs": "CLI Dokumentation",
+      "language-service": "Angular Sprachdienst",
+      "dev-tools": "Angular Entwicklungstools"
+    }
+  }
+}

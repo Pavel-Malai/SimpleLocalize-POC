@@ -225,26 +225,34 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <div class="language-switcher">
+        <label for="language-select">{{ 'LANGUAGE_SELECTOR' | translate }}:</label>
+        <select id="language-select" [value]="currentLanguage" (change)="switchLanguage($any($event.target).value)">
+          @for (lang of languages; track lang.code) {
+            <option [value]="lang.code">{{ lang.name }}</option>
+          }
+        </select>
+      </div>
+      <h1>{{ 'HELLO' | translate: {title: title} }}</h1>
+      <p>{{ 'CONGRATULATIONS' | translate }}</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
         @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-        ]; track item.title) {
+          { titleKey: 'EXPLORE_DOCS', link: 'https://angular.dev' },
+          { titleKey: 'LEARN_TUTORIALS', link: 'https://angular.dev/tutorials' },
+          { titleKey: 'CLI_DOCS', link: 'https://angular.dev/tools/cli' },
+          { titleKey: 'LANGUAGE_SERVICE', link: 'https://angular.dev/tools/language-service' },
+          { titleKey: 'DEV_TOOLS', link: 'https://angular.dev/tools/devtools' },
+        ]; track item.titleKey) {
           <a
             class="pill"
             [href]="item.link"
             target="_blank"
             rel="noopener"
           >
-            <span>{{ item.title }}</span>
+            <span>{{ item.titleKey | translate }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="14"
