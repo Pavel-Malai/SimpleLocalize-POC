@@ -1,4 +1,16 @@
 {
+  "application": {
+    "resources": {
+      "cli-docs": "CLI Docs",
+      "dev-tools": "Angular DevTools",
+      "explore-docs": "Explore the Docs",
+      "language-service": "Angular Language Service",
+      "learn-tutorials": "Learn with Tutorials"
+    },
+    "status": {
+      "congratulations": "Congratulations! Your app is running. 🎉"
+    }
+  },
   "common": {
     "greetings": {
       "hello": "Hello, {{title}}",
@@ -6,18 +18,6 @@
     },
     "navigation": {
       "language-selector": "Select Language"
-    }
-  },
-  "application": {
-    "status": {
-      "congratulations": "Congratulations! Your app is running. 🎉"
-    },
-    "resources": {
-      "explore-docs": "Explore the Docs",
-      "learn-tutorials": "Learn with Tutorials",
-      "cli-docs": "CLI Docs",
-      "language-service": "Angular Language Service",
-      "dev-tools": "Angular DevTools"
     }
   }
 }
