@@ -1,4 +1,16 @@
 {
+  "application": {
+    "resources": {
+      "cli-docs": "Documentación CLI",
+      "dev-tools": "Herramientas de Desarrollo Angular",
+      "explore-docs": "Explorar la Documentación",
+      "language-service": "Servicio de Lenguaje Angular",
+      "learn-tutorials": "Aprender con Tutoriales"
+    },
+    "status": {
+      "congratulations": "¡Felicidades! Tu aplicación está funcionando. 🎉"
+    }
+  },
   "common": {
     "greetings": {
       "hello": "Hola, {{title}}",
@@ -6,18 +18,6 @@
     },
     "navigation": {
       "language-selector": "Seleccionar Idioma"
-    }
-  },
-  "application": {
-    "status": {
-      "congratulations": "¡Felicidades! Tu aplicación está funcionando. 🎉"
-    },
-    "resources": {
-      "explore-docs": "Explorar la Documentación",
-      "learn-tutorials": "Aprender con Tutoriales",
-      "cli-docs": "Documentación CLI",
-      "language-service": "Servicio de Lenguaje Angular",
-      "dev-tools": "Herramientas de Desarrollo Angular"
     }
   }
 }
