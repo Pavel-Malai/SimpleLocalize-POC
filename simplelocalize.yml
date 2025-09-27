@@ -1,0 +1,28 @@
+# SimpleLocalize GitHub App configuration for Angular project
+# Documentation: https://simplelocalize.io/docs/integrations/github-app/
+
+pull-request:
+  title: "🌐 Update translations"
+  body: |
+    This PR contains updated translations from SimpleLocalize.
+    
+    Please review the changes before merging.
+  labels:
+    - "translations"
+    - "i18n"
+
+# Upload source translations (English) to SimpleLocalize
+upload:
+  files:
+    - path: "src/assets/i18n/en-gb.json"
+      format: "single-language-json"
+      language-key: "en-gb"
+      options:
+        - REPLACE_TRANSLATION_IF_FOUND
+        - TRIM_LEADING_AND_TRAILING_WHITESPACES
+
+# Download all translated files from SimpleLocalize
+download:
+  files:
+    - path: "src/assets/i18n/{lang}.json"
+      format: "single-language-json"
