@@ -5,6 +5,7 @@ on:
     branches: [ master]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 env:
   CLI_VERSION: '2.10.0'
