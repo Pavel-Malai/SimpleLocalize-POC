@@ -27,7 +27,7 @@ jobs:
           api-key: ${{ env.SIMPLELOCALIZE_API_KEY_personal }}
           command: 'upload'
           cli-version: ${{ env.CLI_VERSION }}
-          args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER --dryRun'
+          args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER --uploadTags CI-CD,Updated --dryRun'
 
       - name: Upload translation files
         uses: simplelocalize/github-action-cli@v4
@@ -35,7 +35,7 @@ jobs:
           api-key: ${{ env.SIMPLELOCALIZE_API_KEY_personal }}
           command: 'upload'
           cli-version: ${{ env.CLI_VERSION }}
-          args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER'
+          args: '--uploadPath ./src/assets/i18n/{lang}.json --uploadFormat single-language-json --uploadOptions UPDATE_ORDER --uploadTags CI-CD,Updated'
 
       - name: Auto-translate missing translations
         uses: simplelocalize/github-action-cli@v4
