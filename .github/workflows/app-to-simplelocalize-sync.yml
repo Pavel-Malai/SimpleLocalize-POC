@@ -1,4 +1,4 @@
-name: 'SimpleLocalize Translation Management'
+name: 'App To SimpleLocalize Sync'
 
 on:
   push:
