@@ -1,9 +1,6 @@
 name: 'Simplelocalize to App Sync'
 
 on:
-  schedule:
-    # Run daily at 2 AM UTC to check for translation updates
-    - cron: '0 2 * * *'
   workflow_dispatch:
     # Allow manual triggering
 
